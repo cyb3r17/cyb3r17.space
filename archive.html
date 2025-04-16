@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cyb3r17.space - Archive</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --text-color: #fff;
+      --bg-color: #000;
+      --border-color: #555;
+      --secondary-text: #aaa;
+      --accent-color: #00ff00;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Space Mono', monospace;
+      font-size: 1.2rem;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tv-lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      z-index: 9999;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .title-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .title-bar span {
+      color: var(--text-color);
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+
+    .title-bar .line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    ul {
+      list-style-type: circle;
+      padding-left: 1.5rem;
+      width: 100%;
+      margin-top: 0;
+    }
+
+    li {
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a b {
+      color: var(--accent-color);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    .nav-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .quote {
+      color: #555;
+      font-size: 15px;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px dashed var(--border-color);
+      color: var(--secondary-text);
+      font-size: 1rem;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 1rem;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .title-bar span {
+        font-size: 1.2rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 0.9rem;
+      }
+      
+      .container {
+        width: 95%;
+        padding: 0.8rem;
+      }
+      
+      .title-bar span {
+        font-size: 1.1rem;
+      }
+      
+      ul {
+        padding-left: 1rem;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tv-lines"></div>
+
+  <div class="container">
+    <div class="title-bar">
+      <span>cyb3r17.space</span>
+      <div class="line"></div>
+    </div>
+    
+    <h3>A personal archive of files and images I want to share:</h3>
+    <ul>
+      <li>
+        The JFK files released by the Trump administration in a .txt format (they've been OCR'd). You can use this for finetuning models,
+        making a searchable interface or just read through them. | Used for my chat-with-jfk-files project.<br>
+        <a href="https://github.com/cyb3r17/cyb3r17.github.io/releases/download/archivev1/jfk_files_txt.zip"><b>Download here</b></a>
+      </li>
+    </ul>
+  </div>
+   
+  <hr>
+  
+  <div class="nav-container">
+    <div class="nav-links">
+      <a href="index.html">Home</a> | 
+      <a href="wip.html">Projects</a> | 
+      <a href="wip.html">Notes/Blog</a> | 
+      <a href="/archive.html">Archive</a> | 
+      <a href="media.html">Music/Media</a>
+    </div>
+    
+    <p class="quote">"An idiot admires complexity, a genius admires simplicity" -Terry A. Davis</p>
+  </div>
+  
+  <footer>
+    <p>
+      <a href="https://github.com/cyb3r17">GitHub</a> | 
+      <a href="https://x.com/cyb3r_17">X/Twitter</a> | 
+      <a href="mailto:hello.cyber.relieving099@passinbox.com">E-mail</a> |
+      BTC: bc1qh243mxg9637ape9f89fmvrt6wvny5nnxtsv609
+    </p>
+    <p>© 2025 cyb3r17.space | Thanks for visiting! | Built with divine-intellect™️</p>
+  </footer>
+</body>
+</html>

@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cyb3r17.space</title>
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+    :root {
+      --text-color: #fff;
+      --bg-color: #000;
+      --border-color: #555;
+      --secondary-text: #aaa;
+    }
 
     body {
       margin: 0;
       padding: 0;
-      background: #000;
-      color: #fff;
-      font-family: 'Space Mono', serif;
-      font-size: 1.4rem;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Space Mono', monospace;
+      font-size: 1.2rem;
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
@@ -38,11 +44,10 @@
       z-index: 9999;
     }
 
-
-
     .container {
+      width: 90%;
       max-width: 800px;
-      padding: 2rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -52,28 +57,26 @@
       display: flex;
       gap: 2rem;
       align-items: center;
-      margin-top: 2rem;
+      width: 100%;
     }
 
     .pfp {
       width: 200px;
       height: 200px;
-      border: 2px solid #fff;
+      border: 2px solid var(--text-color);
       object-fit: cover;
     }
 
     .about-text {
       flex-grow: 1;
-      color: #fff;
     }
 
     section {
-      margin-top: 1.5rem;
       width: 100%;
     }
 
     a {
-      color: #fff;
+      color: var(--text-color);
       text-decoration: none;
     }
 
@@ -83,85 +86,176 @@
 
     footer {
       text-align: center;
-      margin-top: 5rem;
       padding: 2rem 0;
-      border-top: 1px dashed #555;
-      color: #aaa;
-      font-size: 1rem;
+      border-top: 1px dashed var(--border-color);
+      color: var(--secondary-text);
+      font-size: 0.9rem;
+      width: 100%;
     }
+
     hr {
-  border: none;
-  height: 1px;
-  background-color: #555;
-  margin: 2rem 0;
-  width: 100%;
-}
-.title-bar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2rem;
-}
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 2rem 0;
+      width: 100%;
+    }
 
-.title-bar span {
-  color: #fff;
-  font-size: 1.4rem;
-  margin-right: 1rem;
-  white-space: nowrap;
-}
+    .title-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 0.4rem;
+    }
 
-.title-bar .line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: #555;
-}
+    .title-bar span {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
 
+    .title-bar .line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .quote {
+      color: #555;
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 1rem;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .pfp {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .title-bar span {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 0.9rem;
+      }
+      
+      .container {
+        width: 95%;
+        padding: 0.8rem;
+      }
+      
+      .pfp {
+        width: 150px;
+        height: 150px;
+      }
+      
+      footer {
+        font-size: 0.8rem;
+      }
+      
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .title-bar span {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
-    
   <div class="tv-lines"></div>
 
-
   <div class="container">
-    
     <div class="title-bar">
-        <span>cyb3r17.space</span>
-        <div class="line"></div>
-      </div>
-      
+      <span>cyb3r17.space</span>
+      <div class="line"></div>
+    </div>
+
     <div class="about-section">
       <img class="pfp" src="https://raw.githubusercontent.com/cyb3r17/cyb3r17.space/refs/heads/main/me.png" alt="Profile Picture">
       <div class="about-text">
         <h2>About Me</h2>
-        <p>Hello, I'm cyber - A self-taught programmer with an interest in ML and embedded systems. I head an AI lab at my uni, prursuing undergrad in AI/ML. Other interests lie in history, military aviation, and video-games. Pro decentralization and anti-censorship.</p>
+        <p>Hello, I'm cyber. I write code for robots, rockets and retards.
+          Pro decentralization and anti-censorship. I also like history, military aviation and video-games.
+        </p>
       </div>
     </div>
-
 
     <section>
       <h2>Things I'm currently working on</h2>
       <ul>
-        <li><a href="https://shunyaresearch.github.io/">Shunya Research</a> - A student research lab for RL and bio-inspired AI algorithms.</li>
+        <li><a href="https://shunyaresearch.github.io/">Shunya Research</a> - A student research lab for RL and bio-inspired AI algorithms</li>
         <li>Yuri - AI powered payload management and operations system for model rockets</li>
-        <li><a href="https://github.com/cyb3r17/ICE">ICE </a> - Intrusion Countermeasures Electronics for data centers</li>
-        <li><a href="https://github.com/cyb3r17/tinyrag">tinyrag </a>- Lightweight RAG implementation for all your LLM endpoints</li>
-
-        <br> And much more... (can be viewed on my GitHub)
-      
+        <li><a href="https://github.com/cyb3r17/ICE">ICE</a> - Intrusion Countermeasures Electronics for data centers</li>
+        <li><a href="https://github.com/cyb3r17/tinyrag">tinyrag</a> - Lightweight RAG implementation for all your LLM endpoints</li>
+        <li>And much more... (can be viewed on my GitHub)</li>
       </ul>
     </section>
-<hr>
-<center><a href="#">Projects</a> | <a href="#">Notes/Blog</a> | <a href="#">Archive</a></center>
-
-  <footer>
-    <p>
-      <a href="https://github.com/cyb3r17">GitHub</a> | <a href="https://x.com/cyb3r_17">X/Twitter</a> | <a href="mailto:hello.cyber.relieving099@passinbox.com">E-mail</a>
-      | BTC: bc1qh243mxg9637ape9f89fmvrt6wvny5nnxtsv609
-    </p>
-    <p>© 2025 cyb3r17.space</p>
-  </footer>
+    
+    <hr>
+    
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a> | 
+        <a href="wip.html">Projects</a> | 
+        <a href="wip.html">Notes/Blog</a> | 
+        <a href="/archive.html">Archive</a> | 
+        <a href="media.html">Music/Media</a>
+      </div>
+    
+    <p class="quote">"An idiot admires complexity, a genius admires simplicity" -Terry A. Davis</p>
+    
+    <footer>
+      <p>
+        <a href="https://github.com/cyb3r17">GitHub</a> | 
+        <a href="https://x.com/cyb3r_17">X/Twitter</a> | 
+        <a href="mailto:hello.cyber.relieving099@passinbox.com">E-mail</a> |
+        BTC: bc1qh243mxg9637ape9f89fmvrt6wvny5nnxtsv609
+      </p>
+      <p>© 2025 cyb3r17.space | Thanks for visiting! | Built with divine-intellect™️</p>
+    </footer>
+  </div>
 </body>
 </html>
-
-

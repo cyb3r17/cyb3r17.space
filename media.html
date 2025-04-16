@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cyb3r17.space - Media</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --text-color: #fff;
+      --bg-color: #000;
+      --border-color: #555;
+      --secondary-text: #aaa;
+      --link-hover: #ddd;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Space Mono', monospace;
+      font-size: 1.2rem;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tv-lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      z-index: 9999;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .title-bar span {
+      color: var(--text-color);
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+
+    .title-bar .line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+
+    ul {
+      list-style-type: circle;
+      padding-left: 1.5rem;
+      width: 100%;
+    }
+
+    ul h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+
+    li a {
+      display: inline-block;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--link-hover);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .quote {
+      color: #555;
+      font-size: 15px;
+      text-align: center;
+      margin: 1rem 0;
+      max-width: 90%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px dashed var(--border-color);
+      color: var(--secondary-text);
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 1rem;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .title-bar span {
+        font-size: 1.2rem;
+      }
+      
+      ul {
+        padding-left: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 0.9rem;
+      }
+      
+      .container {
+        width: 95%;
+        padding: 0.8rem;
+      }
+      
+      .title-bar span {
+        font-size: 1.1rem;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      footer {
+        font-size: 0.8rem;
+      }
+      
+      ul h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tv-lines"></div>
+
+  <div class="container">
+    <div class="title-bar">
+      <span>cyb3r17.space</span>
+      <div class="line"></div>
+    </div>
+
+    <ul>
+      <h3>You can find media/music/literature I enjoy, here:</h3>
+      <li>
+        <a href="https://www.youtube.com/watch?v=jKwhln6sOQA&list=PLZVui9S8-Y1j7MYuXIOKcprMJGVvFuvGq&index=3">
+          A YouTube playlist for music from TempleOS made by Terry Davis. This channel posts TempleOS related music annually on August 11th.
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=TnkwUn4rkcc">
+          I found this channel super recently, I like the way she presents various self help topics.
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">
+          Where I learnt LA from
+        </a>
+      </li>
+      <li>Will add more when I get the time!</li>
+    </ul>
+  </div>
+
+  <hr>
+  
+  <div class="nav-container">
+    <div class="nav-links">
+      <a href="index.html">Home</a> | 
+      <a href="wip.html">Projects</a> | 
+      <a href="wip.html">Notes/Blog</a> | 
+      <a href="/archive.html">Archive</a> | 
+      <a href="media.html">Music/Media</a>
+    </div>
+    
+    <p class="quote">"An idiot admires complexity, a genius admires simplicity" -Terry A. Davis</p>
+  </div>
+  
+  <footer>
+    <p>
+      <a href="https://github.com/cyb3r17">GitHub</a> | 
+      <a href="https://x.com/cyb3r_17">X/Twitter</a> | 
+      <a href="mailto:hello.cyber.relieving099@passinbox.com">E-mail</a> |
+      BTC: bc1qh243mxg9637ape9f89fmvrt6wvny5nnxtsv609
+    </p>
+    <p>© 2025 cyb3r17.space | Thanks for visiting! | Built with divine-intellect™️</p>
+  </footer>
+</body>
+</html>
